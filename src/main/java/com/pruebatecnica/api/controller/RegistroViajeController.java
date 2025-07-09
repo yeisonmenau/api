@@ -2,7 +2,6 @@ package com.pruebatecnica.api.controller;
 
 import com.pruebatecnica.api.dto.RegistroViajeRequestDTO;
 import com.pruebatecnica.api.dto.RegistroViajeResponseDTO;
-import com.pruebatecnica.api.model.RegistroViaje;
 import com.pruebatecnica.api.service.RegistroViajeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

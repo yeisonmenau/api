@@ -1,10 +1,8 @@
 package com.pruebatecnica.api.dto;
 
-import com.pruebatecnica.api.model.enums.TitularGasto;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
-
 
 import java.time.LocalDate;
 

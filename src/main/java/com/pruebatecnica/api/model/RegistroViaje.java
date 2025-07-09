@@ -1,9 +1,18 @@
 package com.pruebatecnica.api.model;
 
 import com.pruebatecnica.api.model.enums.TitularGasto;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Column;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 import jakarta.validation.constraints.Min;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -33,7 +42,8 @@ public class RegistroViaje {
 
     @Column(name = "total_gastos", nullable = false)
     @Min(0)
-    private Double totalGastos; // El gasto debe ingresarse con IVA incluido para evitar manejar distintos tipos de IVA según el destino.
+    private Double totalGastos; // El gasto debe ingresarse con IVA incluido para evitar manejar distintos
+    // tipos de IVA según el destino.
 
     @Enumerated(EnumType.STRING)
     @Column(name = "titular_gasto")
@@ -42,7 +52,8 @@ public class RegistroViaje {
     @Column(name = "registro_viaje_fecha", nullable = false)
     private LocalDate registroViajeFecha;
 
-    public RegistroViaje(Empleado empleado, Empleador empleador, Viaje viaje, Double totalGastos, LocalDate registroViajeFecha) {
+    public RegistroViaje(Empleado empleado, Empleador empleador, Viaje viaje,
+                         Double totalGastos, LocalDate registroViajeFecha) {
         this.empleado = empleado;
         this.empleador = empleador;
         this.viaje = viaje;
