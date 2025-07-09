@@ -28,4 +28,10 @@ public class Empleado {
 
     private Integer edad;
 
+    public Empleado(String cedula, String nombre, Integer edad){
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
 }

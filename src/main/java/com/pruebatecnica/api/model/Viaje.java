@@ -27,5 +27,10 @@ public class Viaje {
     private String destino;
     private LocalDate viajeFecha;
 
+    public Viaje (String destino, LocalDate viajeFecha){
+        this.destino = destino;
+        this.viajeFecha = viajeFecha;
+    }
+
 
 }

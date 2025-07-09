@@ -16,7 +16,7 @@ public class Empleador {
     @Column(name = "empleador_id")
     private String empleadorId;
 
-    @Column(name = "empleador_nombre", nullable = false)
+    @Column(name = "empleador_nombre", nullable = false, unique = true)
     private String empleadorNombre;
 
 }
