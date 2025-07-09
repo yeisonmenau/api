@@ -43,6 +43,7 @@ http://localhost:8080/h2-console/
 
 ### Modelo ER
 
+![image](https://github.com/user-attachments/assets/6563b54f-8235-4c68-b6fd-94190527cfde)
 
 
 ## Lógica de Negocio
