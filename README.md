@@ -4,7 +4,7 @@ Este proyecto es una API REST en Spring Boot que gestiona registros de viajes co
 
 ## Descripción del Proyecto
 
-Este sistema permite registrar y consultar viajes realizados por empleados de diferentes del empleador SURA, con un control automático de gastos que determina quién debe asumir los costos según el monto total (empleado o empleador).
+Este sistema permite registrar y consultar viajes realizados por empleados en este caso del empleador SURA, con un control automático de gastos que determina quién debe asumir los costos según el monto total (empleado o empleador).
 
 ### Entidades
 
@@ -33,9 +33,7 @@ Este sistema permite registrar y consultar viajes realizados por empleados de di
 - `registroViajeFecha` (LocalDate): Fecha del registro
 
 ## Modelo de datos
-Una vez ejecutado el proyecto se puede ver la base de datos H2 con las siguientes credenciales en la base de datos estarán los siguientes datos de prueba
-
-## Acceso a H2
+### Acceso a H2
 
 http://localhost:8080/h2-console/
 
@@ -44,7 +42,6 @@ http://localhost:8080/h2-console/
 ### Modelo ER
 
 ![image](https://github.com/user-attachments/assets/6563b54f-8235-4c68-b6fd-94190527cfde)
-
 
 ## Lógica de Negocio
 
@@ -168,7 +165,7 @@ Crea un nuevo registro de viaje.
 - **Jakarta Persistence**: Especificación JPA
 - **Jakarta Validation**: Validación de datos
 - **Lombok**: Reducción de código boilerplate
-- **Base de Datos**: Compatible con cualquier BD relacional
+- **Base de Datos**: En memoria H2
 
 ## Estructura del Proyecto
 
@@ -200,7 +197,7 @@ src/main/java/com/pruebatecnica/api/
 ```
 https://github.com/yeisonmenau/api
 ```
-2. Ejecuta la aplicación desde la clase RegistroViajeService
+2. Ejecuta la aplicación desde la clase ApiApplication
 
 3. Una vez iniciado el servidor, accede al siguiente endpoint en tu navegado
 
