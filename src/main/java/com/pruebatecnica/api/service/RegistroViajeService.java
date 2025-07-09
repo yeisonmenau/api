@@ -10,8 +10,10 @@ import com.pruebatecnica.api.repository.EmpleadoRepository;
 import com.pruebatecnica.api.repository.EmpleadorRepository;
 import com.pruebatecnica.api.repository.RegistroViajeRepository;
 import com.pruebatecnica.api.repository.ViajeRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Comparator;
 import java.util.List;
@@ -51,7 +53,7 @@ public class RegistroViajeService {
                 .collect(Collectors.toList());
     }
 
-    public void guardarRegistroViaje(RegistroViajeRequestDTO datosRegistroViaje){
+    public void guardarRegistroViaje(@Valid @RequestBody RegistroViajeRequestDTO datosRegistroViaje){
         Empleado empleado = empleadoRepository.findById(datosRegistroViaje.getEmpleadoId())
                 .orElseThrow(() -> new RuntimeException("Empleado no encontrado"));
 
